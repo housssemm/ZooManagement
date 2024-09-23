@@ -1,3 +1,4 @@
+
 public class Zoo {
     Animal [] animal;
     String name;
@@ -18,5 +19,13 @@ public class Zoo {
     @Override
     public String toString() {
         return "Zoo : " + name +"city: "+city+ ", Number of cages: " + nbrCages;
+    }
+
+    boolean addAnimal(Animal an){
+        for (int i=0;i<animal.length;i++){
+            if(animal[i]==null){
+            animal[i]=an;
+        }}
+        return true;
     }
 }
