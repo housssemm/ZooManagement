@@ -1,3 +1,5 @@
+package    tn.esprit.gestionzoo.entites;
+
 public class Animal {
     String family ;
     private String name;
@@ -23,7 +25,21 @@ public class Animal {
         return this.age;
     }
 
-
-
+    public void setName(String name){
+        if(name.isEmpty()){
+            System.out.println("name is empty");
+        }
+        else {
+            this.name = name;
+        }
+    }
+    public  void  setAge(int age){
+        if(age<0){
+            System.out.println("Age can't be negative");
+        }
+        else {
+            this.age = age;
+        }
+    }
 }
 

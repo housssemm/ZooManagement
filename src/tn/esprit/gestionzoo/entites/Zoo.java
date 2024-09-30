@@ -21,7 +21,7 @@ public class Zoo {
         return "Zoo : " + name +"city: "+city+ ", Number of cages: " + nbrCages;
     }
 
-    boolean addAnimal(Animal an){
+    public boolean addAnimal(Animal an){
         if (isFull()){
             return false;
         }else{
@@ -56,7 +56,7 @@ public class Zoo {
         }
     }
 
-    int searchAnimal(Animal animale){
+    public int searchAnimal(Animal animale){
         for (int i=0;i<animal.length;i++){
             if (animal[i]!=null && animal[i].getName()==animale.getName()){
                 return i;
@@ -65,7 +65,7 @@ public class Zoo {
         }
         return -1;
     }
-    boolean removeAnimal(Animal an){
+    public boolean removeAnimal(Animal an){
         if (searchAnimal(an)==-1){
             return false;
         }
@@ -73,13 +73,13 @@ public class Zoo {
         else{animal[searchAnimal(an)]=null;}
         return true;
     }
-    boolean isFull(){
+    public boolean isFull(){
         if (animal.length==nbrCages){
             return true;
         }
         return false;
     }
-    static Zoo comparerZoo(Zoo z1, Zoo z2){
+    public static Zoo comparerZoo(Zoo z1, Zoo z2){
         if(z1.animal.length>z2.animal.length){
             return z1;
         }

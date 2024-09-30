@@ -29,6 +29,9 @@
 //    }
 //}
     package tn.esprit.gestionzoo.main;
+    import tn.esprit.gestionzoo.entites.Zoo;
+    import tn.esprit.gestionzoo.entites.Animal;
+
 public class ZooManagement {
     public static void main(String[]args){
 
