@@ -1,7 +1,7 @@
 public class Animal {
     String family ;
-    String name;
-    int age;
+    private String name;
+    private int age;
     boolean isMammal;
     public Animal() {}
     public Animal(String family, String name, int age, boolean isMammal) {
@@ -14,4 +14,16 @@ public class Animal {
     public String toString() {
         return "family : " + family +"name: "+name+ ", age: " + age +"isMammal : "+isMammal;
     }
+
+
+    public String getName(){
+        return this.name;
+    }
+    public int getAge(){
+        return this.age;
+    }
+
+
+
 }
+

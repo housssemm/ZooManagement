@@ -28,16 +28,32 @@
 //
 //    }
 //}
+    package tn.esprit.gestionzoo.main;
 public class ZooManagement {
     public static void main(String[]args){
 
         Animal lion = new Animal();
         Zoo myZoo = new Zoo("zoo" ,"tunis",20);
+        Zoo myZoo2 = new Zoo("zooo","tunissss",23);
         myZoo.displayZoo();
         System.out.println(myZoo);
         System.out.println(myZoo.toString());
         Animal an=new Animal("aaa","bbb",25,true);
+        Animal ann=new Animal("ccc","ddd",26,false);
+        Animal annn=new Animal("eee","fff",26,false);
+        Animal annne=new Animal("eee","fff",26,false);
         myZoo.addAnimal(an);
+        myZoo.addAnimal(ann);
+        myZoo.addAnimal(annn);
+        myZoo.addAnimal(annne);
+        myZoo.affiche();
+
+        System.out.println(myZoo.searchAnimal(ann));
+        System.out.println(myZoo.searchAnimal(annne));
+        System.out.println(myZoo.removeAnimal(annne));
+       myZoo.removeAnimal(annne);
+        System.out.println(myZoo.isFull());
+        System.out.println(Zoo.comparerZoo(myZoo,myZoo2));
     }
 
 }
